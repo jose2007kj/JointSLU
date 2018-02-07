@@ -31,7 +31,10 @@ else
 			fi
 			RES_PATH=experiment/res.w-intent/"$HDIM"-"$DROPOUT"
 			MDL_PATH=experiment/mdl.w-intent/"$HDIM"-"$DROPOUT"
-			CMD="$GPUSET python $PROG --train $TRAIN --dev $DEV --test $TEST --sgdtype $OPTFUNC --arch $MDL --iter_per_epoch $ITER_EPOCH --out $RES_PATH -m $MAX_ITER --mdl_path $MDL_PATH --record_epoch $NUM_RECORD --dropout True --dropout_ratio $DROPOUT --hidden_size $HDIM --time_length $TLEN --embedding_size $VDIM --input_type embedding"
+			#commented out for execution in CPU
+			#CMD="$GPUSET python $PROG --train $TRAIN --dev $DEV --test $TEST --sgdtype $OPTFUNC --arch $MDL --iter_per_epoch $ITER_EPOCH --out $RES_PATH -m $MAX_ITER --mdl_path $MDL_PATH --record_epoch $NUM_RECORD --dropout True --dropout_ratio $DROPOUT --hidden_size $HDIM --time_length $TLEN --embedding_size $VDIM --input_type embedding"
+			#removed $GPUSET
+			CMD="python $PROG --train $TRAIN --dev $DEV --test $TEST --sgdtype $OPTFUNC --arch $MDL --iter_per_epoch $ITER_EPOCH --out $RES_PATH -m $MAX_ITER --mdl_path $MDL_PATH --record_epoch $NUM_RECORD --dropout True --dropout_ratio $DROPOUT --hidden_size $HDIM --time_length $TLEN --embedding_size $VDIM --input_type embedding"
 			echo $CMD
 		done
 	done
