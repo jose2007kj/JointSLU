@@ -1,5 +1,6 @@
 # JointSLU: Joint Semantic Parsing for Spoken/Natural Language Understanding
 
+## script.py file is can be uploaded for executing in kaggle kernel........ it performs slot filling only
 
 *A Keras implementation of the models described in [Hakkani-Tur et al. (2016)] (https://www.csie.ntu.edu.tw/~yvchen/doc/IS16_MultiJoint.pdf).*
 
